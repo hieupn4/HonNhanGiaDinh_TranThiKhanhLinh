@@ -27,6 +27,154 @@ public class HonNhanBenVung {
         Chong m1 = new Chong("m1");
         Chong m2 = new Chong("m2");
         Chong m3 = new Chong("m3");
+        Chong m4 = new Chong("m4");
+        Chong m5 = new Chong("m5");
+        Vo w1 = new Vo("w1");
+        Vo w2 = new Vo("w2");
+        
+        Vo.soluongchong = 2;
+        m1.danhsachmucdoyeu.add(w2);
+        m1.danhsachmucdoyeu.add(w1);       
+        
+        m2.danhsachmucdoyeu.add(w1);
+        m2.danhsachmucdoyeu.add(w2);     
+        
+        m3.danhsachmucdoyeu.add(w1);
+        m3.danhsachmucdoyeu.add(w2);
+       
+       
+        
+        m4.danhsachmucdoyeu.add(w1);
+        m4.danhsachmucdoyeu.add(w2);
+        
+        m5.danhsachmucdoyeu.add(w2);
+        m5.danhsachmucdoyeu.add(w1);
+        
+        
+        //-------------------------------
+        w1.danhsachmucdoyeu.add(m1);
+        w1.danhsachmucdoyeu.add(m5);
+        w1.danhsachmucdoyeu.add(m4);
+        w1.danhsachmucdoyeu.add(m2);
+        w1.danhsachmucdoyeu.add(m3);
+        
+        w2.danhsachmucdoyeu.add(m3);
+        w2.danhsachmucdoyeu.add(m4);
+        w2.danhsachmucdoyeu.add(m5);
+        w2.danhsachmucdoyeu.add(m2);
+        w2.danhsachmucdoyeu.add(m1);
+        
+        
+           
+        x.add(m1);x.add(m2);x.add(m3);x.add(m4);x.add(m5);
+        y.add(w1);y.add(w2);
+        /*
+        bộ dữ liệu 5
+        Chong m1 = new Chong("m1");
+        Chong m2 = new Chong("m2");
+        Chong m3 = new Chong("m3");
+        Chong m4 = new Chong("m4");
+        Vo w1 = new Vo("w1");
+        Vo w2 = new Vo("w2");
+        Vo w3 = new Vo("w3");
+        Vo.soluongchong = 1;
+        m1.danhsachmucdoyeu.add(w2);
+        m1.danhsachmucdoyeu.add(w1);
+        m1.danhsachmucdoyeu.add(w3);
+        
+        
+        m2.danhsachmucdoyeu.add(w3);
+        m2.danhsachmucdoyeu.add(w2);
+        m2.danhsachmucdoyeu.add(w1);
+        
+        
+        m3.danhsachmucdoyeu.add(w3);
+        m3.danhsachmucdoyeu.add(w1);
+        m3.danhsachmucdoyeu.add(w2);
+       
+        
+        m4.danhsachmucdoyeu.add(w1);
+        m4.danhsachmucdoyeu.add(w3);
+        m4.danhsachmucdoyeu.add(w2);
+        
+        //-------------------------------
+        w1.danhsachmucdoyeu.add(m1);
+        w1.danhsachmucdoyeu.add(m3);
+        w1.danhsachmucdoyeu.add(m4);
+        w1.danhsachmucdoyeu.add(m2);
+        
+        w2.danhsachmucdoyeu.add(m3);
+        w2.danhsachmucdoyeu.add(m4);
+        w2.danhsachmucdoyeu.add(m1);
+        w2.danhsachmucdoyeu.add(m2);
+        
+        w3.danhsachmucdoyeu.add(m4);
+        w3.danhsachmucdoyeu.add(m1);
+        w3.danhsachmucdoyeu.add(m3);
+        w3.danhsachmucdoyeu.add(m2);
+        
+        
+        
+        x.add(m1);x.add(m2);x.add(m3);x.add(m4);
+        y.add(w1);y.add(w2);y.add(w3); */
+        /*
+        bộ dữ liệu 4
+        Chong m1 = new Chong("m1");
+        Chong m2 = new Chong("m2");
+        Chong m3 = new Chong("m3");
+        Chong m4 = new Chong("m4");
+        Vo w1 = new Vo("w1");
+        Vo w2 = new Vo("w2");
+        Vo w3 = new Vo("w3");
+        Vo w4 = new Vo("w4");
+        Vo.soluongchong = 1;
+        m1.danhsachmucdoyeu.add(w1);
+        m1.danhsachmucdoyeu.add(w2);
+        m1.danhsachmucdoyeu.add(w3);
+        m1.danhsachmucdoyeu.add(w4);
+        
+        m2.danhsachmucdoyeu.add(w1);
+        m2.danhsachmucdoyeu.add(w4);
+        m2.danhsachmucdoyeu.add(w3);
+        m2.danhsachmucdoyeu.add(w2);
+        
+        m3.danhsachmucdoyeu.add(w2);
+        m3.danhsachmucdoyeu.add(w1);
+        m3.danhsachmucdoyeu.add(w3);
+        m3.danhsachmucdoyeu.add(w4);
+        
+        m4.danhsachmucdoyeu.add(w4);
+        m4.danhsachmucdoyeu.add(w2);
+        m4.danhsachmucdoyeu.add(w3);
+        m4.danhsachmucdoyeu.add(w1);
+        //-------------------------------
+        w1.danhsachmucdoyeu.add(m4);
+        w1.danhsachmucdoyeu.add(m3);
+        w1.danhsachmucdoyeu.add(m1);
+        w1.danhsachmucdoyeu.add(m2);
+        
+        w2.danhsachmucdoyeu.add(m2);
+        w2.danhsachmucdoyeu.add(m4);
+        w2.danhsachmucdoyeu.add(m1);
+        w2.danhsachmucdoyeu.add(m3);
+        
+        w3.danhsachmucdoyeu.add(m4);
+        w3.danhsachmucdoyeu.add(m1);
+        w3.danhsachmucdoyeu.add(m2);
+        w3.danhsachmucdoyeu.add(m3);
+        
+        w4.danhsachmucdoyeu.add(m3);
+        w4.danhsachmucdoyeu.add(m2);
+        w4.danhsachmucdoyeu.add(m1);
+        w4.danhsachmucdoyeu.add(m4);
+        
+        x.add(m1);x.add(m2);x.add(m3);x.add(m4);
+        y.add(w1);y.add(w2);y.add(w3);y.add(w4); 
+        */
+        /* bộ dữ liệu 3
+        Chong m1 = new Chong("m1");
+        Chong m2 = new Chong("m2");
+        Chong m3 = new Chong("m3");
         Vo w1 = new Vo("w1");
         Vo w2 = new Vo("w2");
         Vo.soluongchong = 2;
@@ -44,9 +192,10 @@ public class HonNhanBenVung {
         w2.danhsachmucdoyeu.add(m2);
         w2.danhsachmucdoyeu.add(m1);
         x.add(m1);x.add(m2);x.add(m3);
-        y.add(w2);y.add(w1); 
+        y.add(w2);y.add(w1);  */
         /*
-       /* Chong m1 = new Chong("m1");
+       /* bọ dữ liệu 2
+        Chong m1 = new Chong("m1");
         Chong m2 = new Chong("m2");
         Vo w1 = new Vo("w1");
         Vo w2 = new Vo("w2");
