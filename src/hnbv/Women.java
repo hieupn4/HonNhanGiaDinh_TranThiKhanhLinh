@@ -83,6 +83,7 @@ public class Women {
             {
                 if (fianceList.size() < q) {
                     fianceList.add(x);
+                    System.out.println(name + " đính hôn với thằng " + x.getName());
                     // nhớ cập nhật những thông tin của thằng chồng.
                     x.getFianceList().add(this);
                     return true;
@@ -122,6 +123,8 @@ public class Women {
                                           refuseMen(preferList.get(min));
                                        // bỏ thằng y vào danh sách chồng hiện tại
                                           fianceList.add(y);
+                                          System.out.println(name + " loại thằng hôn phu tệ nhất là "+preferList.get(min).getName()+" để thay vào bởi thằng " + y.getName());
+
                                           y.getFianceList().add(this);
                                           return true;
                                    }
