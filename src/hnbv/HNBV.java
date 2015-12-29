@@ -158,6 +158,7 @@ public class HNBV {
         
         Marriage h = new Marriage(x);
         kh = h.doMarried();
+        System.out.println("Kết Quả Ghép Các Cặp Đôi Như Sau");
         for(int i=0;i<kh.size();i++)
             {
             kh.get(i).display();
