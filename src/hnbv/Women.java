@@ -74,7 +74,6 @@ public class Women {
                           // cập nhật lại thông tin cho ng dan ong vua bi loai
                           x.getFianceList().clear();
                           Marriage.menList.add(x);
-                          System.out.print("loại :"+x.getName()+"\n");
                           
                        }
             }
