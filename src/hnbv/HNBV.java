@@ -164,13 +164,15 @@ public class HNBV {
             kh.get(i).display();
             System.out.println("");
             } 
-        // kiem tra xem trong menList cua lop Marriage co nhung thang doc than nao thi hien thi ra
-        if(Marriage.menList.size() >0)
+        // kiem tra xem có nhung người đàn ông độc thân nào thì hiện thị ra
+        if(Marriage.menListSigle.size()>0)
             {
                System.out.println("Nhung thang dan ong con doc than");
-               for(int i=0;i<Marriage.menList.size();i++)
-                    System.out.println(Marriage.menList.get(i).getName());
+               for(int i=0;i<Marriage.menListSigle.size();i++)
+                    System.out.println(Marriage.menListSigle.get(i).getName());
             }
+        else
+            System.out.println("Khong co nguoi dan ong doc than");
     }
     
 }
