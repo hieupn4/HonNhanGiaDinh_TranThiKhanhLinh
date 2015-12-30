@@ -167,7 +167,7 @@ public class HNBV {
         // kiem tra xem có nhung người đàn ông độc thân nào thì hiện thị ra
         if(Marriage.menListSigle.size()>0)
             {
-               System.out.println("Nhung thang dan ong con doc than");
+               System.out.println("Những thằng đàn ông còn độc thân");
                for(int i=0;i<Marriage.menListSigle.size();i++)
                     System.out.println(Marriage.menListSigle.get(i).getName());
             }
