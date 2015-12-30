@@ -14,9 +14,12 @@ import java.util.ArrayList;
 public class Marriage {
   // danh sách các ông chồng chuẩn bị đi tuyển vợ
     public static ArrayList<Men> menList = new ArrayList();
+    // tạo danh sách để lưu những người đàn ông độc thân
+    public static ArrayList<Men> menListSigle = new ArrayList();
     public ArrayList<Women> womenList = new ArrayList();
     public Marriage() {
         menList = null;
+        menListSigle =null;
         womenList = null;
     }
     // hàm khởi tạo đầu vào là danh sách các ông chồng đã có đầy đủ các thông tin
@@ -38,6 +41,7 @@ public class Marriage {
                                dem = dem+1;
                            else
                                {
+                                  menListSigle.add(menList.get(i));
                                   menList.remove(i);
                                   i = i-1;
                                }
