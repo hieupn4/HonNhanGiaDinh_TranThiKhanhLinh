@@ -18,7 +18,7 @@ public class HNBV {
      */
     public static void main(String[] args) {
         
-        ArrayList<Men> x = new ArrayList();
+     /*   ArrayList<Men> x = new ArrayList();
         ArrayList<Women> y = new ArrayList();
         // arraylist này lưu những cặp vợ chồng
         ArrayList<Couple> kh = new ArrayList();
@@ -46,7 +46,7 @@ public class HNBV {
         w2.addList(l[1]);
         
         x.add(m1);x.add(m2);x.add(m3);x.add(m4);x.add(m5);
-        y.add(w1);y.add(w2);
+        y.add(w1);y.add(w2); */
         
         /*
          bộ 7-3-2       
@@ -155,8 +155,9 @@ public class HNBV {
         
         x.add(m1);x.add(m2);x.add(m3);x.add(m4);x.add(m5);
         y.add(w1);y.add(w2);y.add(w3); */
-        
-        Marriage h = new Marriage(x);
+        Readfile.readfile("C:\\Users\\PhamNgocHieu\\Desktop\\HonNhanGiaDinh_TranThiKhanhLinh-master\\src\\hnbv\\input53.txt");
+        Marriage h = new Marriage(Readfile.x);
+        ArrayList<Couple> kh = new ArrayList();
         kh = h.doMarried();
         System.out.println("Kết Quả Ghép Các Cặp Đôi Như Sau");
         for(int i=0;i<kh.size();i++)
