@@ -6,6 +6,7 @@
 package hnbv;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 
@@ -18,7 +19,7 @@ public class HNBV {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) throws FileNotFoundException, UnsupportedEncodingException {
+    public static void main(String[] args) throws FileNotFoundException, UnsupportedEncodingException, IOException {
         
      /*   ArrayList<Men> x = new ArrayList();
         ArrayList<Women> y = new ArrayList();
@@ -157,7 +158,10 @@ public class HNBV {
         
         x.add(m1);x.add(m2);x.add(m3);x.add(m4);x.add(m5);
         y.add(w1);y.add(w2);y.add(w3); */
-        String url ="C:\\Users\\PhamNgocHieu\\Documents\\NetBeansProjects\\thutest\\src\\hnbv\\input732.txt";
+        String url ="C:\\Users\\PhamNgocHieu\\Documents\\NetBeansProjects\\thutest\\src\\hnbv\\input.txt";
+        //chuẩn hóa file đầu vào cho hợp lệ
+        Parsefile.parseContextOfFile(url);
+        // chương trình bắt đầu chạy từ đây
         Readfile.readfile(url);
         Marriage h = new Marriage(Readfile.x);
         ArrayList<Couple> kh = new ArrayList();
@@ -165,6 +169,8 @@ public class HNBV {
         System.out.println("Kết Quả Ghép Các Cặp Đôi Như Sau");
         Writefile.writeContextln(url,"");
         Writefile.writeContextln(url,"----------------------------------------------------------------");
+        if(!Parsefile.invalidChange)
+        Writefile.writeContextln(url," Chú Ý: nội dung file ban đầu có thể đã được chương trình tự động chỉnh sửa lại để hợp chuẩn đầu vào ");    
         for(int i=0;i<kh.size();i++)
             {
             kh.get(i).display();
