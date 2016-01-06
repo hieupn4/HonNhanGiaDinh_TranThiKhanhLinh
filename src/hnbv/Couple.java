@@ -21,7 +21,13 @@ public class Couple {
     public Couple(Women woman, ArrayList<Men> men) {
         this.woman = woman;
         this.men = men;
-    }   
+    }  
+    public Women getWoman() {
+        return woman;
+    }
+    public ArrayList<Men> getMen() {
+        return men;
+    }
     @Override
     public String toString() {
         String mList= "";
