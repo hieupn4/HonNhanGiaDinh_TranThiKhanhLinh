@@ -23,11 +23,11 @@ public class Writefile {
      * @throws UnsupportedEncodingException 
      * nếu file chưa có thì nó sẽ tạo ra rồi ghi vào, còn nếu có rồi thì ghi tiếp vào nội dung file hiện có
      */
+    // ghi không xuống dòng
     public static void writeContext(String url, String context) throws FileNotFoundException, UnsupportedEncodingException {
         FileOutputStream write = new FileOutputStream(url, true);
         PrintWriter pw = new PrintWriter(write);
-        pw.println("");
-        pw.println(context);
+        pw.print(context);
         pw.flush();
         pw.close();
         
@@ -36,4 +36,12 @@ public class Writefile {
         writer.print(context);
         writer.close();*/
     }
+    // ghi có xuống dòng
+    public static void writeContextln(String url, String context) throws FileNotFoundException, UnsupportedEncodingException {
+        FileOutputStream write = new FileOutputStream(url, true);
+        PrintWriter pw = new PrintWriter(write);
+        pw.println(context);
+        pw.flush();
+        pw.close();
 }
+    }
