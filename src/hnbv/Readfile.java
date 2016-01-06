@@ -31,8 +31,6 @@ public class Readfile {
             while ((line = br.readLine()) != null) {
                 line = line.trim();
                 String[] splitString = line.split(" ");
-                for(int i=0;i<splitString.length;i++)
-                    System.out.println(splitString[i]);
                 dem ++;
                 if(dem==1)
                     {
