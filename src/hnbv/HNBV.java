@@ -5,6 +5,8 @@
  */
 package hnbv;
 
+import java.io.FileNotFoundException;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 
 /**
@@ -16,7 +18,7 @@ public class HNBV {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException, UnsupportedEncodingException {
         
      /*   ArrayList<Men> x = new ArrayList();
         ArrayList<Women> y = new ArrayList();
@@ -155,7 +157,7 @@ public class HNBV {
         
         x.add(m1);x.add(m2);x.add(m3);x.add(m4);x.add(m5);
         y.add(w1);y.add(w2);y.add(w3); */
-        String url ="C:\\Users\\PhamNgocHieu\\Desktop\\HonNhanGiaDinh_TranThiKhanhLinh-master\\src\\hnbv\\input44.txt";
+        String url ="C:\\Users\\PhamNgocHieu\\Documents\\NetBeansProjects\\thutest\\src\\hnbv\\input732.txt";
         Readfile.readfile(url);
         Marriage h = new Marriage(Readfile.x);
         ArrayList<Couple> kh = new ArrayList();
