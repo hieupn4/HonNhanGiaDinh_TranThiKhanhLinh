@@ -155,22 +155,42 @@ public class HNBV {
         
         x.add(m1);x.add(m2);x.add(m3);x.add(m4);x.add(m5);
         y.add(w1);y.add(w2);y.add(w3); */
-        Readfile.readfile("C:\\Users\\PhamNgocHieu\\Desktop\\HonNhanGiaDinh_TranThiKhanhLinh-master\\src\\hnbv\\input53.txt");
+        String url ="C:\\Users\\PhamNgocHieu\\Desktop\\HonNhanGiaDinh_TranThiKhanhLinh-master\\src\\hnbv\\input44.txt";
+        Readfile.readfile(url);
         Marriage h = new Marriage(Readfile.x);
         ArrayList<Couple> kh = new ArrayList();
         kh = h.doMarried();
         System.out.println("Kết Quả Ghép Các Cặp Đôi Như Sau");
+        Writefile.writeContextln(url,"");
+        Writefile.writeContextln(url,"----------------------------------------------------------------");
         for(int i=0;i<kh.size();i++)
             {
             kh.get(i).display();
             System.out.println("");
-            } 
+            Writefile.writeContext(url,kh.get(i).getWoman().getName()+" kết hôn với : ");
+            for(int j=0;j<kh.get(i).getMen().size();j++)
+                {
+                    Writefile.writeContext(url,kh.get(i).getMen().get(j).getName());
+                    if(j!=(kh.get(i).getMen().size()-1))
+                        Writefile.writeContext(url,","); 
+                    else
+                        Writefile.writeContext(url,".");  
+                }
+            Writefile.writeContextln(url,"");
+                
+            }
         // kiem tra xem có nhung người đàn ông độc thân nào thì hiện thị ra
         if(Marriage.menListSigle.size()>0)
             {
                System.out.println("Những thằng đàn ông còn độc thân");
+               // ghi vào file
+               Writefile.writeContextln(url,"Những thằng đàn ông còn độc thân");
                for(int i=0;i<Marriage.menListSigle.size();i++)
+                   {
                     System.out.println(Marriage.menListSigle.get(i).getName());
+                    // ghi vào file
+                    Writefile.writeContext(url,Marriage.menListSigle.get(i).getName());
+                   }
             }
         else
             System.out.println("Khong co nguoi dan ong doc than");
