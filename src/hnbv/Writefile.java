@@ -6,6 +6,7 @@
 package hnbv;
 
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 
@@ -20,11 +21,18 @@ public class Writefile {
      * @param context : nội dung cần ghi vào file
      * @throws FileNotFoundException
      * @throws UnsupportedEncodingException 
-     * nếu file chưa có thì nó sẽ tạo ra rồi ghi vào, còn nếu có rồi thì ghi ghi đè lên nội dung cũ
+     * nếu file chưa có thì nó sẽ tạo ra rồi ghi vào, còn nếu có rồi thì ghi tiếp vào nội dung file hiện có
      */
     public static void writeContext(String url, String context) throws FileNotFoundException, UnsupportedEncodingException {
-        PrintWriter writer = new PrintWriter(url, "UTF-8");
+        FileOutputStream write = new FileOutputStream(url, true);
+        PrintWriter pw = new PrintWriter(write);
+        pw.write(context);
+        pw.flush();
+        pw.close();
+        
+      /*  PrintWriter writer = new PrintWriter(url, "UTF-8");
         writer.print(context);
-        writer.close();
+        writer.print(context);
+        writer.close();*/
     }
 }
