@@ -64,7 +64,7 @@ public class Readfile {
                            {
                               // đây là trường hợp dữ liệu của nhóm wommen 
                               for(int i=0;i<splitString.length;i++)
-                                 y.get(dem-8).getPreferList().add(x.get(Integer.parseInt(splitString[i])-1));
+                                 y.get(dem-3-mCount).getPreferList().add(x.get(Integer.parseInt(splitString[i])-1));
                            }
                     }
                // System.out.println("line data: " + line);
