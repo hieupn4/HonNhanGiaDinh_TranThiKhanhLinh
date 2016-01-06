@@ -26,7 +26,8 @@ public class Writefile {
     public static void writeContext(String url, String context) throws FileNotFoundException, UnsupportedEncodingException {
         FileOutputStream write = new FileOutputStream(url, true);
         PrintWriter pw = new PrintWriter(write);
-        pw.write(context);
+        pw.println("");
+        pw.println(context);
         pw.flush();
         pw.close();
         
