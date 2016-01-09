@@ -158,11 +158,14 @@ public class HNBV {
         
         x.add(m1);x.add(m2);x.add(m3);x.add(m4);x.add(m5);
         y.add(w1);y.add(w2);y.add(w3); */
-        String url ="C:\\Users\\PhamNgocHieu\\Documents\\NetBeansProjects\\thutest\\src\\hnbv\\input.txt";
+        //url này là địa chỉ của file dữ liệu
+        String url1 ="C:\\Users\\PhamNgocHieu\\Documents\\NetBeansProjects\\thutest\\src\\hnbv\\input.txt";
+        //url này là địa chỉ của file kết quả
+        String url ="C:\\Users\\PhamNgocHieu\\Documents\\NetBeansProjects\\thutest\\src\\hnbv\\input_ketqua.txt";
         //chuẩn hóa file đầu vào cho hợp lệ
-        Parsefile.parseContextOfFile(url);
+        Parsefile.parseContextOfFile(url1);
         // chương trình bắt đầu chạy từ đây
-        Readfile.readfile(url);
+        Readfile.readfile(url1);
         Marriage h = new Marriage(Readfile.x);
         ArrayList<Couple> kh = new ArrayList();
         kh = h.doMarried();
